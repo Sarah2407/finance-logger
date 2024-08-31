@@ -1,8 +1,9 @@
-export class Invoice{
+import { HasFormatter } from '../interfaces/HasFormatter.js';
+export class Invoice implements HasFormatter{
     constructor(
-        public client: string,
-        public details: string,
-        private amount: number
+        readonly client: string,
+        private details: string,
+        public amount: number
     ){}
 
     format(){
